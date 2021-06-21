@@ -56,7 +56,7 @@ $PAGE->set_context($context);
 $PAGE->set_title($survey->name);
 $PAGE->set_heading($course->fullname);
 
-echo $OUTPUT->header();
+// echo $OUTPUT->header();
 echo $OUTPUT->box_start('generalbox mod_ovmsurvey-box boxaligncenter');
 
 // Get the mod config.
@@ -65,10 +65,6 @@ $config = get_config('mod_visio');
 // $header = new \mod_ovmsurvey\output\header($survey->name);
 // $output = $PAGE->get_renderer('mod_ovmsurvey');
 // echo $output->render($header);
-
-$view_link = $CFG->wwwroot."/mod/ovmsurvey/view.php?id=".$cm->id;
-$prev = ucfirst(get_string('previous_step', 'mod_ovmsurvey'));
-echo "<p><a href=\"$view_link\" style=\"font-size: 1.2rem;\"><= $prev</a></p>";
 
 // Div to render the radar chart.
 echo '<div class="radar-chart"></div>';
@@ -96,4 +92,4 @@ $output = $PAGE->get_renderer('mod_ovmsurvey');
 echo $output->render($review);
 
 echo $OUTPUT->box_end();
-echo $OUTPUT->footer();
+// echo $OUTPUT->footer();

@@ -19,7 +19,7 @@ function($, ajax, notification) {
                 this.parseData(data);
 
                 if (this._totalStmts == data.length) {
-                    this.showReviewButton();
+                    this.activeReviewButton();
                 }
 
                 return true;
@@ -39,8 +39,9 @@ function($, ajax, notification) {
         }
     };
 
-    GetAnswers.prototype.showReviewButton = function() {
-        return $('#ovmsurvey-review').show();
+    GetAnswers.prototype.activeReviewButton = function() {
+        $('#ovmsurvey-review-button').removeClass("disabled");
+        $('#ovmsurvey-review-link').removeClass("hidden");
     };
 
     return GetAnswers;

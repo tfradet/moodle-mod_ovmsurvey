@@ -41,6 +41,14 @@ class mod_ovmsurvey_external extends external_api {
         );
     }
 
+    // public static function get_status() {
+    //     global $DB, $USER;
+
+    //     $status = $DB->get_record('ovmsurvey_status', array('userid' => $USER->id));
+
+    //     return $data->status;
+    // }
+
     public static function set_status($status) {
         global $DB, $USER;
 

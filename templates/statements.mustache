@@ -18,8 +18,11 @@
     @template mod_ovmsurvey/statements
 }}
 <div id="ovmsurvey-statements-{{uniqid}}" class="ovmsurvey-statements" data-region="ovmsurvey-statements">
+
     {{#subskills}}
         <h4 class="ovmsurvey-subcompetency">{{{name}}}</h4>
+
+        <div class="alert alert-primary">{{{instructions}}}</div>
 
         <ul>
             {{#statements}}
@@ -28,9 +31,9 @@
         </ul>
     {{/subskills}}
 
-    <div class="hidden" id="ovmsurvey-review">
-        <div class="alert alert-info">{{{survey_end}}}</div>
-        <a href="review.php?id={{cmid}}" class="btn btn-primary btn-lg" id="ovmsurvey-review-button">
+    <div id="ovmsurvey-review">
+        {{! <div class="alert alert-info">{{{survey_end} } }</div> }}
+        <a href="review.php?id={{cmid}}" class="btn btn-primary btn-lg disabled" id="ovmsurvey-review-button">
             {{{view_report}}}
         </a>
     </div>

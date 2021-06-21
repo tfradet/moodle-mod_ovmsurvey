@@ -18,13 +18,16 @@
     @template mod_ovmsurvey/header
 }}
 <div id="ovmsurvey-header-{{uniqid}}" class="ovmsurvey-header" data-region="ovmsurvey-header">
-    <div class="alert alert-info">{{{instructions}}}</div>
-    <h3 class="ovmsurvey-competency">{{{name}}}</h3>
+
+    {{! <h3 class="ovmsurvey-competency">{{{name} } }</h3> }}
 
     <div class="col-12">
-        {{{my_status}}} <span id="ovm-status" class="btn btn-secondary">{{{status}}}</span>
+        <p style="float: left;"><a href="{{{course_link}}}" style="font-size: 1.2rem;"><= {{{course_name}}}</a></p>
+        <p style="float: right;" id="ovmsurvey-review-link" class="hidden"><a href="{{{review_link}}}" style="font-size: 1.2rem;">{{{review}}} =></a></p>
+        <p style="clear: both;">{{{my_status}}} : <strong>{{{status}}}</strong><br>
+        <span id="ovm-status" class="btn btn-sm btn-primary mt-1">{{{set_status}}}</span></p>
 
-        <ul id="status_picker" class="hidden mt-3">
+        <ul id="status_picker" class="hidden mt-0 pl-0">
             <li class="status-item badge badge-secondary p-2" data-value="student">{{{student}}}</li>
             <li class="status-item badge badge-secondary p-2" data-value="teacher">{{{teacher}}}</li>
         </ul>

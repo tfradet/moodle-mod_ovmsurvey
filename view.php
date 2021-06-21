@@ -62,7 +62,7 @@ echo $OUTPUT->box_start('generalbox mod_ovmsurvey-box boxaligncenter');
 // Get the mod config.
 $config = get_config('mod_visio');
 
-$header = new \mod_ovmsurvey\output\header($survey->name);
+$header = new \mod_ovmsurvey\output\header($survey->name, $cm->id);
 $output = $PAGE->get_renderer('mod_ovmsurvey');
 echo $output->render($header);
 

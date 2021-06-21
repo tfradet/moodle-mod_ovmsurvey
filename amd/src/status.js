@@ -1,16 +1,17 @@
 define(['jquery', 'core/str', 'core/ajax', 'core/notification'],
 function($, str, ajax, notification) {
     var Status = function() {
-        var st = localStorage.getItem('ovms-status');
+        // var st = localStorage.getItem('ovms-status');
 
-        if (!st) {
-            $('#status_picker').show();
-        } else {
-            str.get_string(st, 'ovmsurvey')
-                .done(function(s) {
-                    $('#ovm-status').text(s);
-                });
-        }
+        // if (!st) {
+        //     $('#status_picker').show();
+            // localStorage.setItem('ovms-status', 'student');
+        // } else {
+            // str.get_string(st, 'ovmsurvey')
+            //     .done(function(s) {
+            //         $('#ovm-status').text(s);
+            //     });
+        // }
 
         $('.status-item').bind('click', function(){
             var status = $(this).data('value');
@@ -23,8 +24,8 @@ function($, str, ajax, notification) {
                 },
                 done: function(data) {
                     str.get_string(data, 'ovmsurvey')
-                        .done(function(s) {
-                            $('#ovm-status').text(s);
+                        .done(function() {
+                            // $('#ovm-status').text(s);
                             $('#status_picker').hide();
                             window.location.reload();
                         });

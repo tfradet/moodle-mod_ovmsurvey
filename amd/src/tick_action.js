@@ -31,7 +31,7 @@ function($, ajax, notification) {
                     $(element.target).parent().parent().parent().parent().parent().find('.check-svg').removeClass('hidden');
 
                     if (this._totalStmts == data) {
-                        this.showReviewButton();
+                        this.activeReviewButton();
                     }
 
                     return true;
@@ -41,8 +41,9 @@ function($, ajax, notification) {
         }
     };
 
-    TickAction.prototype.showReviewButton = function() {
-        return $('#ovmsurvey-review').show();
+    TickAction.prototype.activeReviewButton = function() {
+        $('#ovmsurvey-review-button').removeClass("disabled");
+        $('#ovmsurvey-review-link').removeClass("hidden");
     };
 
     return TickAction;

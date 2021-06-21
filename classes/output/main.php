@@ -58,6 +58,9 @@ class main implements renderable, templatable {
 
         $total = get_question_total($statements);
 
+        $scale_info_1 = '<span>'.get_string('scale_info_1', 'mod_ovmsurvey');
+        $scale_info_2 = '<span>'.get_string('scale_info_4', 'mod_ovmsurvey');
+
         $tooltip = '<span>'.get_string('scale_info_1', 'mod_ovmsurvey');
         $tooltip .= '<br>'.get_string('scale_info_4', 'mod_ovmsurvey').'</span>';
 
@@ -70,7 +73,8 @@ class main implements renderable, templatable {
             'total' => $total,
             'tooltip' => $tooltip,
             'survey_end' => get_string('end', 'mod_ovmsurvey'),
-            'view_report' => get_string('view_report', 'mod_ovmsurvey')
+            'view_report' => get_string('view_report', 'mod_ovmsurvey'),
+            'instructions' => get_string('instructions', 'mod_ovmsurvey')
         ];
     }
 }

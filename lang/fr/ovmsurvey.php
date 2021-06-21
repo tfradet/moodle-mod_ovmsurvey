@@ -24,7 +24,7 @@ $string['reports_heading'] = 'Rapport d&rsquo;auto-évaluation';
 $string['name'] = 'Nom';
 $string['skill'] = 'Compétence';
 $string['surveytype'] = 'Type de questionnaire';
-$string['instructions'] = 'Complétez le questionnaire ci-dessous en indiquant, pour chacune des affirmations, si vous êtes d&rsquo;accord (valeurs de 3 à 4) ou non (valeurs de 1 à 2).';
+$string['instructions'] = 'Complétez le questionnaire ci-dessous en indiquant, pour chacune des affirmations, si vous êtes <strong>d&rsquo;accord (valeurs de 3 à 4)</strong> ou <strong>non (valeurs de 1 à 2)</strong>.';
 
 $string['previous_step'] = 'revenir à l’étape précédente';
 $string['next_step'] = 'aller à l’étape suivante';
@@ -36,7 +36,7 @@ $string['end'] = 'Vous avez terminé le questionnaire';
 $string['view_report'] = 'Voir mon compte rendu';
 $string['scale_info_1'] = '1 : pas du tout d’accord';
 $string['scale_info_4'] = '4 : entièrement d’accord';
-$string['set_status'] = 'Je définis mon statut :';
+$string['set_status'] = 'Je définis mon statut';
 $string['my_status'] = 'Mon statut ';
 $string['status_student'] = 'Etudiant';
 $string['status_teacher'] = 'Enseignant';

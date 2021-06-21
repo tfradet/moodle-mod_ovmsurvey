@@ -43,10 +43,17 @@ function get_status() {
 
     $status = $DB->get_record('ovmsurvey_status', array('userid' => $USER->id));
     if ($status && $status->status != '') {
+        
         return $status->status;
-    }
+    
+    } else {
+    
+        $data = $DB->insert_record('ovmsurvey_status', array(
+                'status' => 'student',
+                'userid' => $USER->id));
 
-    return 'student';
+        return 'student';
+    }
 }
 
 function get_question_total($skill) {

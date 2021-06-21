@@ -29,8 +29,9 @@ use stdClass;
 
 class header implements renderable, templatable {
 
-    public function __construct($name) {
+    public function __construct($name, $id) {
         $this->name = $name;
+        $this->id = $id;
     }
 
     /**
@@ -40,15 +41,27 @@ class header implements renderable, templatable {
      * @return stdClass
      */
     public function export_for_template(renderer_base $output) {
-        $status = get_status();
+        
+        global $CFG, $COURSE;
+
+        $status = get_string(get_status(), 'mod_ovmsurvey');
+
+        $course_link = $CFG->wwwroot."/course/view.php?id=".$COURSE->id;
+
+        $review_link = $CFG->wwwroot."/mod/ovmsurvey/review.php?id=".$this->id;
 
         return [
+            'review' => get_string('view_report', 'mod_ovmsurvey'),
+            'review_link' => $review_link,
+            'course_link' => $course_link,
+            'course_name' => $COURSE->fullname,
             'name' => $this->name,
             'instructions' => get_string('instructions', 'mod_ovmsurvey'),
             'my_status' => get_string('my_status', 'mod_ovmsurvey'),
             'student' => get_string('student', 'mod_ovmsurvey'),
             'teacher' => get_string('teacher', 'mod_ovmsurvey'),
-            'status' => $status
+            'status' => $status,
+            'set_status' => get_string('set_status', 'mod_ovmsurvey')
         ];
     }
 }
