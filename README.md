@@ -7,6 +7,8 @@ Provides self-assessment surveys with a review page.
 This plugin must be installed in Moodle mod directory.
 See http://docs.moodle.org/en/Installing_plugins for details.
 
+Place this plugin into an "ovmsurvey" folder into "mod" moodle directory. 
+
 ## Usage
 
 An instance of the mod can be added like any other Moodle activity.
